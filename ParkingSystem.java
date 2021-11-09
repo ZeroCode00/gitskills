@@ -27,7 +27,7 @@ public class ParkingSystem implements IParking,IParams{
 	}
 	public void print() {
 		for(int i = 0;i<num.size();i++) {
-			System.out.print(num.get(i));
+			System.out.print(num.get(i)+" ");
 		}
 		System.out.println();
 	}
@@ -58,9 +58,7 @@ public class ParkingSystem implements IParking,IParams{
 		IParams params = IParking.parse();
 		ParkingSystem ps = new ParkingSystem(params.getBig(),params.getSmall(),params.getMedium());
 		ArrayList<Integer> plan = ps.getPlanParking();
-		for(int i = 0;i<plan.size();i++) {
-			ps.addCar(plan.get(i));
-		}
+		System.out.println(plan);
 		ps.print();
 	}
 
